@@ -64,8 +64,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-dC-MOj">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-dC-MOj">
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
+                                                <color key="minimumTrackTintColor" red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -98,8 +100,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-7B-4e9">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="140" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-7B-4e9">
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.67338966836734693" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -132,8 +136,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kj4-1j-Ard">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="99" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Kj4-1j-Ard">
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.5" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -165,6 +171,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
