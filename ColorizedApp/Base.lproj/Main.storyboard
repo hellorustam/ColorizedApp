@@ -30,20 +30,35 @@
                                         <rect key="frame" x="0.0" y="149" width="288" height="191"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="doc.on.doc.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hjt-yk-dxN">
-                                                <rect key="frame" x="251" y="14.5" width="21" height="20"/>
+                                                <rect key="frame" x="240" y="14.5" width="32" height="35"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="21" id="Ai1-gB-EPG"/>
-                                                    <constraint firstAttribute="height" constant="17" id="d7D-mf-7GO"/>
+                                                    <constraint firstAttribute="width" constant="32" id="O8o-7C-tqM"/>
+                                                    <constraint firstAttribute="height" constant="32" id="SkP-Qv-EHL"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7W-9y-IWu">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="191"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Copied HEX color">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="copyColorRectangle" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJL-PQ-0lv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hjt-yk-dxN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBC-EJ-d1d" secondAttribute="leading" constant="251" id="4Th-qS-pg8"/>
+                                            <constraint firstAttribute="trailing" secondItem="r7W-9y-IWu" secondAttribute="trailing" id="Fv2-Ot-v0I"/>
                                             <constraint firstAttribute="trailing" secondItem="hjt-yk-dxN" secondAttribute="trailing" constant="16" id="GO9-uF-a3s"/>
+                                            <constraint firstItem="r7W-9y-IWu" firstAttribute="top" secondItem="sBC-EJ-d1d" secondAttribute="top" id="Ka1-9i-l0E"/>
+                                            <constraint firstItem="r7W-9y-IWu" firstAttribute="leading" secondItem="sBC-EJ-d1d" secondAttribute="leading" id="Vxc-ko-Anv"/>
+                                            <constraint firstAttribute="bottom" secondItem="r7W-9y-IWu" secondAttribute="bottom" id="heO-wL-KEK"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hjt-yk-dxN" secondAttribute="bottom" constant="143" id="n2W-V9-LwU"/>
                                             <constraint firstItem="hjt-yk-dxN" firstAttribute="top" secondItem="sBC-EJ-d1d" secondAttribute="top" constant="16" id="rfI-wd-A2n"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hjt-yk-dxN" secondAttribute="bottom" constant="158" id="tQ0-Pe-7Fl"/>
+                                            <constraint firstItem="hjt-yk-dxN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBC-EJ-d1d" secondAttribute="leading" constant="240" id="zr1-QF-qUo"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -85,7 +100,7 @@
                                                 <color key="minimumTrackTintColor" red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
                                                 <connections>
-                                                    <action selector="redSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="evn-N7-gWt"/>
+                                                    <action selector="redSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Kjr-gO-vrt"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -191,12 +206,13 @@
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="2eo-Kj-aDX" id="Vpf-Ve-1d7"/>
-                        <outlet property="blueSliderProperty" destination="Kj4-1j-Ard" id="ROF-UI-qAm"/>
+                        <outlet property="blueSliderProperty" destination="Kj4-1j-Ard" id="39H-nv-RVt"/>
+                        <outlet property="copyButton" destination="r7W-9y-IWu" id="YSm-iY-0TN"/>
                         <outlet property="greenLabel" destination="3cR-9V-Dm7" id="Dhu-tD-gj5"/>
                         <outlet property="greenSliderProperty" destination="Sav-7B-4e9" id="BUG-fp-Z2H"/>
                         <outlet property="rectangleBlock" destination="sBC-EJ-d1d" id="sIE-jY-ja7"/>
                         <outlet property="redLabel" destination="ikl-0C-KUO" id="bJn-Rw-15A"/>
-                        <outlet property="redSliderProperty" destination="ehv-dC-MOj" id="uNp-Lh-1u9"/>
+                        <outlet property="redSliderProperty" destination="ehv-dC-MOj" id="ce4-Py-lTI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
