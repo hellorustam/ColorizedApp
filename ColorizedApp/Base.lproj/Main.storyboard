@@ -28,7 +28,23 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBC-EJ-d1d">
                                         <rect key="frame" x="0.0" y="149" width="288" height="191"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="doc.on.doc.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hjt-yk-dxN">
+                                                <rect key="frame" x="251" y="14.5" width="21" height="20"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="21" id="Ai1-gB-EPG"/>
+                                                    <constraint firstAttribute="height" constant="17" id="d7D-mf-7GO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="hjt-yk-dxN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBC-EJ-d1d" secondAttribute="leading" constant="251" id="4Th-qS-pg8"/>
+                                            <constraint firstAttribute="trailing" secondItem="hjt-yk-dxN" secondAttribute="trailing" constant="16" id="GO9-uF-a3s"/>
+                                            <constraint firstItem="hjt-yk-dxN" firstAttribute="top" secondItem="sBC-EJ-d1d" secondAttribute="top" constant="16" id="rfI-wd-A2n"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hjt-yk-dxN" secondAttribute="bottom" constant="158" id="tQ0-Pe-7Fl"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -68,6 +84,9 @@
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
+                                                <connections>
+                                                    <action selector="redSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="evn-N7-gWt"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -104,6 +123,9 @@
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.67338966836734693" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
+                                                <connections>
+                                                    <action selector="greenSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Tlw-4H-Zz7"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -140,6 +162,9 @@
                                                 <rect key="frame" x="102" y="0.0" width="188" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.5" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray4Color"/>
+                                                <connections>
+                                                    <action selector="blueSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="H6K-Wv-hME"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -164,6 +189,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vXR-HN-5Fy" secondAttribute="trailing" constant="16" id="ufD-Nx-MsG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="2eo-Kj-aDX" id="Vpf-Ve-1d7"/>
+                        <outlet property="blueSliderProperty" destination="Kj4-1j-Ard" id="ROF-UI-qAm"/>
+                        <outlet property="greenLabel" destination="3cR-9V-Dm7" id="Dhu-tD-gj5"/>
+                        <outlet property="greenSliderProperty" destination="Sav-7B-4e9" id="BUG-fp-Z2H"/>
+                        <outlet property="rectangleBlock" destination="sBC-EJ-d1d" id="sIE-jY-ja7"/>
+                        <outlet property="redLabel" destination="ikl-0C-KUO" id="bJn-Rw-15A"/>
+                        <outlet property="redSliderProperty" destination="ehv-dC-MOj" id="uNp-Lh-1u9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +205,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.on.doc.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
