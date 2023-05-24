@@ -20,11 +20,22 @@ class ViewController: UIViewController {
     
     @IBOutlet var copyButton: UIButton!
     
+    private var redValue: Float {
+        round(redSliderProperty.value)
+    }
+    private var greenValue: Float {
+        round(greenSliderProperty.value)
+    }
+    private var blueValue: Float {
+        round(blueSliderProperty.value)
+    }
+    
+    
     private func setBackgroundColor() {
         rectangleBlock.backgroundColor = UIColor(
-            red: CGFloat(Int(redSliderProperty.value)) / 255.0,
-            green: CGFloat(Int(greenSliderProperty.value)) / 255.0,
-            blue: CGFloat(Int(blueSliderProperty.value)) / 255.0,
+            red: CGFloat(redValue) / 255.0,
+            green: CGFloat(greenValue) / 255.0,
+            blue: CGFloat(blueValue) / 255.0,
             alpha: CGFloat(1.0)
         )
     }
@@ -32,9 +43,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rectangleBlock.layer.cornerRadius = 16
-        redLabel.text = String(Int(redSliderProperty.value))
-        greenLabel.text = String(Int(greenSliderProperty.value))
-        blueLabel.text = String(Int(blueSliderProperty.value))
+        redLabel.text = String(redValue)
+        greenLabel.text = String(greenValue)
+        blueLabel.text = String(blueValue)
         
         copyButton.titleLabel?.text = ""
         
@@ -43,19 +54,19 @@ class ViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction func redSlider() {
-        redLabel.text = String(Int(redSliderProperty.value))
+        redLabel.text = String(redValue)
         setBackgroundColor()
         copyButton.titleLabel?.text = ""
     }
     
     @IBAction func greenSlider() {
-        greenLabel.text = String(Int(greenSliderProperty.value))
+        greenLabel.text = String(greenValue)
         setBackgroundColor()
         copyButton.titleLabel?.text = ""
     }
     
     @IBAction func blueSlider() {
-        blueLabel.text = String(Int(blueSliderProperty.value))
+        blueLabel.text = String(blueValue)
         setBackgroundColor()
         copyButton.titleLabel?.text = ""
     }
@@ -63,9 +74,9 @@ class ViewController: UIViewController {
     @IBAction func copyColorRectangle() {
         copyButton.titleLabel?.text = "Copied HEX color"
         
-        UIPasteboard.general.string = "#" + String(format:"%02X", Int(redSliderProperty.value)) +
-        String(format:"%02X", Int(greenSliderProperty.value)) +
-        String(format:"%02X", Int(blueSliderProperty.value))
+        UIPasteboard.general.string = "#" + String(format:"%02X", redValue) +
+        String(format:"%02X", greenValue) +
+        String(format:"%02X", blueValue)
     }
 }
 
