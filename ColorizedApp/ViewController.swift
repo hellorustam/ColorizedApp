@@ -36,11 +36,11 @@ class ViewController: UIViewController {
         
         switch sender {
         case redSliderProperty:
-            redLabel.text = setStringValue(from: redSliderProperty)
+            redLabel.text = setStringValue(from: sender)
         case greenSliderProperty:
-            greenLabel.text = setStringValue(from: greenSliderProperty)
+            greenLabel.text = setStringValue(from: sender)
         default:
-            blueLabel.text = setStringValue(from: blueSliderProperty)
+            blueLabel.text = setStringValue(from: sender)
         }
     }
     
